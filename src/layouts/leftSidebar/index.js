@@ -14,13 +14,11 @@ export default function LeftSidebar() {
   const StyledTitleSideBar = styled.span`
     color: #fff;
     margin-left: 20px;
-    font-size: 22px;
     margin-bottom: 16px;
   `;
   const StyledButtonSideBar = styled.li`
     background-color: inherit;
     color: #fff;
-    padding-left: 34px;
     border: none;
     &:hover {
       background-color: rgba(255, 255, 255, 0.15);

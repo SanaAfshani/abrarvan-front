@@ -141,7 +141,7 @@ export default function FromArticle({ isEdit }) {
 
             <button
               disabled={loading}
-              className="btn btn-primary w-25"
+              className="btn btn-primary"
               type="submit"
             >
               Submit

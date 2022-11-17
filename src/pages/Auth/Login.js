@@ -12,7 +12,6 @@ export default function Login() {
     align-items: center;
     align-self: center;
     margin: auto;
-    width: 450px;
     padding: 37px 20px 19px;
     border-radius: 4px;
     background-color: var(--silver);
@@ -25,8 +24,8 @@ export default function Login() {
 
   return (
     <>
-      <StyledContainer>
-        <StyledSmallContainer>
+      <StyledContainer  className="col-12">
+        <StyledSmallContainer className="col-lg-4 col-md-4 col-sm-4">
           <StyledTitleLogin>LOGIN</StyledTitleLogin>
           <LoginForm />
         </StyledSmallContainer>

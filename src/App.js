@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/layout";
 import Page404 from "./pages/404/404";
@@ -8,6 +8,20 @@ import AllArticle from "./pages/allArticle/index";
 import NewArticle from "./pages/newArticle";
 import EditArticle from "./pages/editArticle";
 function App() {
+  const [width, setWidth] = useState(window.innerWidth);
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   return (
     <>
       <div className="app">
@@ -16,39 +30,39 @@ function App() {
             <Route
               path="/articles"
               element={
-                <Layout>
-                  <AllArticle />
+                <Layout isMobile={isMobile}>
+                  <AllArticle isMobile={isMobile} />
                 </Layout>
               }
             />
             <Route
               path="/articles/page/:page"
               element={
-                <Layout>
-                  <AllArticle />
+                <Layout isMobile={isMobile}>
+                  <AllArticle isMobile={isMobile} />
                 </Layout>
               }
             />
             <Route
               path="/newArticle"
               element={
-                <Layout>
-                  <NewArticle />
+                <Layout isMobile={isMobile}>
+                  <NewArticle isMobile={isMobile} />
                 </Layout>
               }
             />
             <Route
               path="/articles/edit/:slug"
               element={
-                <Layout>
-                  <EditArticle />
+                <Layout isMobile={isMobile}>
+                  <EditArticle isMobile={isMobile} />
                 </Layout>
               }
             />
-            <Route element={<Page404 />} />
+            <Route path="*" element={<Page404 />} />
           </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login isMobile={isMobile} />} />
+          <Route path="/register" element={<Register isMobile={isMobile} />} />
         </Routes>
       </div>
     </>

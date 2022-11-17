@@ -21,8 +21,8 @@ export default function Table() {
   }, [dispatch, page]);
   return (
     <>
-      <table class="table">
-        <thead className="thead-light">
+      <table class="table table-responsive-sm">
+        <thead className="thead-light table-responsive-sm">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Title</th>
@@ -33,7 +33,7 @@ export default function Table() {
             <th scope="col">Created</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="table-responsive-sm">
           {Articles.articles && Articles.articles.length > 0 ? (
             Articles.articles.map((el, idx) => (
               <tr key={el.favoritesCount}>

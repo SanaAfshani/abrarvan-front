@@ -9,7 +9,8 @@ const Div = styled.div`
   width: 100%;
 `;
 const Input = styled.input`
-  width: 410px;
+  /* width: 410px; */
+  width: 100%;
   height: 40px;
   margin: 9px 0 25px;
   border-radius: 4px;

@@ -29,6 +29,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+h2{
+  font-size: 22px;
+}
+span{
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+h2{
+  font-size: 16px;
+}
+span{
+  font-size: 14px;
+}
+.overflowPagination{
+  overflow-x: auto;
+}
+}
 .active {
   background-color: rgba(255, 255, 255, 0.15);
   color: #fff;

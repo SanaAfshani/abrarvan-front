@@ -13,7 +13,7 @@ export default function TopSidebar() {
     color: #fff;
   `;
   const StyledTitle = styled.span`
-    font-size: 22px;
+    /* font-size: 22px; */
     color: #fff;
   `;
 

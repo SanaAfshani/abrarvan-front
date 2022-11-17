@@ -11,7 +11,7 @@ export default function Paginations({ nPages, page, setPage }) {
   return (
     <nav
       aria-label="Page navigation example "
-      className="d-flex justify-content-center"
+      className="d-flex justify-content-lg-center overflowPagination"
     >
       <ul class="pagination">
         <li class="page-item">
