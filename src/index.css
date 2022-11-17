@@ -1,13 +1,45 @@
+/* coller palette*/
+:root {
+  --charcoal-grey: #373a3c;
+  --gunmetal: #55595c;
+  --silver: #eceeef;
+  --pale-red: #d9534f;
+  --gray77: #777777;
+  --gray81: #818a91;
+  --grayDD: #dddddd;
+  --blue1C: #1c7cd5;
+  --green1C: #1c7cd5;
+  --sky-blue: #56c0e0;
+  --orangeF0: #f0ad4e;
+  --white-blueDC: #dcedf6;
+  --sliverE2: #e2eed8;
+  --white-pinkFC: #fcf7e4;
+  --white-purpleEF: #efdfdf;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+.tdTable{
+  width: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.activeButtonPagination{
+  background-color: #1c7cd5;
+  color: #fff;
 }
